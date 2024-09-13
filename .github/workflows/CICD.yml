@@ -1,7 +1,8 @@
-name : hello-world
+name : build
 on: push
-jobs :
-print:
-runs_on: ubuntu-latest
-steps :
-- run: echo "Hello World"
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps :
+   - name : copie code depuis github vers ubuntu
+     uses: actions/checkout@v3
